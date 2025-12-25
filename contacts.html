@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Slot</title>
+</head>
+<body class="dark:bg-yellow-100">
+
+    <nav class="border-gray-200 dark:bg-yellow-500 dark:border-gray-700">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="no_av_main.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="/public/images/logo-2.svg" class="h-8" alt="Slot Logo" />
+              <span class="self-center text-2x2 font-semibold whitespace-nowrap dark:text-black">Slot</span>
+          </a>
+          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-yellow-500 dark:border-gray-700">
+              <li>
+                <a href="no_av_main.html" class="block py-2 px-3 text-black md:hover:text-white" aria-current="page">Главная</a>
+              </li>
+              <li>
+                <a href="autorization.html" class="block py-2 px-3 text-black md:hover:text-white" aria-current="page">Войти</a>
+              </li>
+              <li>
+                <a href="registration.html" class="block py-2 px-3 text-black md:hover:text-white" aria-current="page">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="max-w-2xl mx-auto p-4">
+        <h1 class="text-2xl font-bold mb-6 text-center dark:text-black">Контакты</h1>
+        
+        <div class="mb-6">
+            <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4zm3 1h6v2H7V5zm0 4h6v2H7V9z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg dark:text-black">Главный офис</h3>
+            </div>
+            <div class="bg-yellow-50 dark:bg-yellow-200 p-4 rounded-lg">
+                <p class="mb-2 dark:text-black">г. Москва, ул. Примерная, 15</p>
+                <p class="text-gray-700 dark:text-gray-800">Пн-Вс: 9:00 - 21:00</p>
+            </div>
+        </div>
+        
+        <div class="mb-6">
+            <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg dark:text-black">Телефоны</h3>
+            </div>
+            <div class="bg-yellow-50 dark:bg-yellow-200 p-4 rounded-lg">
+                <a href="tel:+79991234567" class="block font-bold text-lg mb-1 dark:text-black hover:text-yellow-700">
+                    +7 (999) 123-45-67
+                </a>
+                <p class="text-sm text-gray-700 dark:text-gray-800 mb-3">Основной номер</p>
+                <a href="tel:+79991234568" class="block font-bold text-lg mb-1 dark:text-black hover:text-yellow-700">
+                    +7 (999) 123-45-68
+                </a>
+                <p class="text-sm text-gray-700 dark:text-gray-800">Техническая поддержка</p>
+            </div>
+        </div>
+        
+        <div class="mb-6">
+            <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg dark:text-black">Электронная почта</h3>
+            </div>
+            <div class="bg-yellow-50 dark:bg-yellow-200 p-4 rounded-lg">
+                <a href="mailto:support@slot.ru" class="block font-bold mb-1 dark:text-black hover:text-yellow-700">
+                    ✉️ support@slot.ru
+                </a>
+                <p class="text-sm text-gray-700 dark:text-gray-800 mb-3">Общие вопросы</p>
+                <a href="mailto:booking@slot.ru" class="block font-bold mb-1 dark:text-black hover:text-yellow-700">
+                    ✉️ booking@slot.ru
+                </a>
+                <p class="text-sm text-gray-700 dark:text-gray-800">Бронирование</p>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <div class="flex items-center mb-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <h3 class="font-bold text-lg dark:text-black">Мы в соцсетях</h3>
+            </div>
+            <div class="bg-yellow-50 dark:bg-yellow-200 p-4 rounded-lg">
+                <div class="flex justify-center space-x-4">
+                    <a href="#" class="w-12 h-12 bg-yellow-500 text-black rounded-full 
+                                     flex items-center justify-center hover:bg-yellow-600">
+                        VK
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-yellow-500 text-black rounded-full 
+                                     flex items-center justify-center hover:bg-yellow-600">
+                        TG
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-yellow-500 text-black rounded-full 
+                                     flex items-center justify-center hover:bg-yellow-600">
+                        IG
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mb-8">
+            <h3 class="font-bold text-lg mb-4 text-center dark:text-black">Обратная связь</h3>
+            <div class="space-y-4">
+                <input type="text" placeholder="Ваше имя" 
+                       class="w-full p-3 border border-gray-300 text-sm rounded-lg 
+                              focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 
+                              dark:bg-yellow-500 dark:border-gray-800 dark:placeholder-yellow-700 
+                              dark:text-black dark:focus:ring-yellow-600 dark:focus:border-yellow-600">
+                <input type="email" placeholder="Ваш email" 
+                       class="w-full p-3 border border-gray-300 text-sm rounded-lg 
+                              focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 
+                              dark:bg-yellow-500 dark:border-gray-800 dark:placeholder-yellow-700 
+                              dark:text-black dark:focus:ring-yellow-600 dark:focus:border-yellow-600">
+                <textarea placeholder="Ваше сообщение" rows="3"
+                          class="w-full p-3 border border-gray-300 text-sm rounded-lg 
+                                 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 
+                                 dark:bg-yellow-500 dark:border-gray-800 dark:placeholder-yellow-700 
+                                 dark:text-black dark:focus:ring-yellow-600 dark:focus:border-yellow-600"></textarea>
+                <button class="w-full bg-yellow-500 hover:bg-yellow-600 text-black 
+                             font-medium rounded-lg text-sm px-5 py-2.5 text-center 
+                             focus:ring-4 focus:ring-yellow-100">
+                    Отправить сообщение
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-yellow-500 mt-8">
+        <div class="max-w-screen-xl mx-auto p-4 md:py-8">
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                        <img src="/public/images/logo-2.svg" class="h-8" alt="Slot Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Slot</span>
+                    </a>
+                    <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-600">
+                        <li>
+                            <a href="#" class="hover:underline me-4 md:me-6">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline me-4 md:me-6">Политика конфиденциальности</a>
+                        </li>
+                    </ul>
+                </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-600">© 2025 Slot™</span>
+        </div>
+    </footer>
+
+</body>
+</html>

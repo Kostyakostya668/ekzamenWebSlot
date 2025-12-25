@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация | Slot</title>
+    
+    <meta name="description" content="Регистрация в системе Slot. Создайте аккаунт для доступа ко всем возможностям веб-приложения.">
+    <meta name="keywords" content="регистрация, веб-приложение, slot, создание аккаунта">
+    <meta name="author" content="Slot Team">
+    
+    <meta property="og:title" content="Регистрация | Slot">
+    <meta property="og:description" content="Создайте аккаунт в системе Slot">
+    <meta property="og:image" content="/public/images/logo-2.svg">
+    <meta property="og:type" content="website">
+</head>
+
+<body class="dark:bg-yellow-100 min-h-screen flex flex-col">
+
+    <nav class="border-gray-200 dark:bg-yellow-500 dark:border-gray-700">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="/public/images/logo-2.svg" class="h-8" alt="Slot Logo" />
+              <span class="self-center text-2x2 font-semibold whitespace-nowrap dark:text-black">Slot</span>
+          </a>
+          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-yellow-500 dark:border-gray-700">
+              <li>
+                <a href="no_av_main.html" class="block py-2 px-3 text-black md:hover:text-white" aria-current="page">Главная</a>
+              </li>
+              <li>
+                <a href="autorization.html" class="block py-2 px-3 text-black md:hover:text-white" aria-current="page">Войти</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="w-full max-w-sm">
+            <form class="bg-yellow-50 dark:bg-yellow-100 p-8 rounded-lg shadow-md border border-yellow-200">
+                <h2 class="text-2xl font-bold text-center text-gray-800 dark:text-gray-900 mb-6">Создать аккаунт</h2>
+                
+                <div class="mb-5">
+                    <label for="username" class="block mb-2 text-sm font-medium text-black dark:text-gray-900">
+                        Имя пользователя
+                    </label>
+                    <input type="text" 
+                           id="username" 
+                           class="border-gray-800 text-gray-800 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-yellow-200 dark:border-gray-700 dark:placeholder-gray-600 dark:text-black dark:focus:ring-yellow-500 dark:focus:border-yellow-500" 
+                           placeholder="Введите ваше имя" 
+                           required />
+                    <div id="username-error" class="mt-1 text-sm text-red-600 hidden"></div>
+                </div>
+                
+                <div class="mb-5">
+                    <label for="email" class="block mb-2 text-sm font-medium text-black dark:text-gray-900">
+                        Электронная почта
+                    </label>
+                    <input type="email" 
+                           id="email" 
+                           class="border-gray-800 text-gray-800 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-yellow-200 dark:border-gray-700 dark:placeholder-gray-600 dark:text-black dark:focus:ring-yellow-500 dark:focus:border-yellow-500" 
+                           placeholder="example@gmail.com" 
+                           required />
+                    <div id="email-error" class="mt-1 text-sm text-red-600 hidden"></div>
+                </div>
+                
+                <div class="mb-5">
+                    <label for="password" class="block mb-2 text-sm font-medium text-black dark:text-gray-900">
+                        Пароль
+                    </label>
+                    <div class="relative">
+                        <input type="password" 
+                               id="password" 
+                               class="border-gray-800 text-gray-800 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-yellow-200 dark:border-gray-700 dark:placeholder-gray-600 dark:text-black dark:focus:ring-yellow-500 dark:focus:border-yellow-500" 
+                               placeholder="Минимум 6 символов" 
+                               required />
+                        <button type="button" 
+                                id="toggle-password" 
+                                class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 hover:text-gray-700">
+                        </button>
+                    </div>
+                    <div id="password-error" class="mt-1 text-sm text-red-600 hidden"></div>
+                </div>
+                
+                <div class="mb-5">
+                    <label for="confirm-password" class="block mb-2 text-sm font-medium text-black dark:text-gray-900">
+                        Подтвердите пароль
+                    </label>
+                    <input type="password" 
+                           id="confirm-password" 
+                           class="border-gray-800 text-gray-800 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-yellow-200 dark:border-gray-700 dark:placeholder-gray-600 dark:text-black dark:focus:ring-yellow-500 dark:focus:border-yellow-500" 
+                           placeholder="Повторите пароль" 
+                           required />
+                    <div id="confirm-password-error" class="mt-1 text-sm text-red-600 hidden"></div>
+                </div>
+                
+                <div id="terms-error" class="mt-1 text-sm text-red-600 ml-6 hidden"></div>
+                
+                <div class="flex justify-center mb-4">
+                    <button type="submit" 
+                            id="register-button" 
+                            class="font-medium rounded-lg text-sm px-8 py-2.5 text-center bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300 dark:bg-yellow-500 dark:hover:bg-yellow-600 dark:focus:ring-yellow-800 text-black">
+                        Зарегистрироваться
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-yellow-500">
+        <div class="max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <a href="#" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                    <img src="/public/images/logo-2.svg" class="h-8" alt="Slot Logo" />
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Slot</span>
+                </a>
+                <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-600 sm:mb-0 dark:text-gray-800">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">Политика конфиденциальности</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <span class="block text-sm text-gray-600 sm:text-center dark:text-gray-800">© 2025 Slot™</span>
+        </div>
+    </footer>
+
+    <script type="module" src="registration.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>
