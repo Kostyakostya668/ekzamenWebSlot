@@ -452,7 +452,6 @@ function addContract() {
     CreatedAt: new Date().toISOString()
   }).then(() => {
     showAlert('success', 'Успех', 'Договор добавлен');
-    // Очистить поля
     ['contract-client-id', 'contract-car-id', 'contract-start-date', 'contract-end-date', 'contract-price'].forEach(id => {
       document.getElementById(id).value = '';
     });
@@ -521,7 +520,7 @@ window.deleteContract = function(contractId) {
   });
 }
 
-// ========== СОТРУДНИКИ (Employees) ==========
+// сотрудники
 
 function loadEmployees() {
   const refEmployees = ref(db, 'Employees');
@@ -642,16 +641,13 @@ window.deleteEmployee = function(employeeId) {
   });
 }
 
-// ========== ИНИЦИАЛИЗАЦИЯ ==========
+// инициализация
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Настройка табов
   setupTabs();
   
-  // Загрузить данные для активной вкладки
   loadCars();
   
-  // Кнопки добавления
   document.getElementById('add-car-btn').addEventListener('click', addCar);
   document.getElementById('add-client-btn').addEventListener('click', addClient);
   document.getElementById('add-contract-btn').addEventListener('click', addContract);

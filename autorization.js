@@ -4,17 +4,13 @@ import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.6.0
 
 import { firebaseConfig } from "./firebase-config.js";
 
-// Initialize Firebase
 const firebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase(firebaseApp);
 
-// Функция для входа пользователя
 async function loginUser() {
-    // Получение email и пароля из формы
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Простая валидация формы
     if (!email || !password) {
         Swal.fire({
             icon: "error",
@@ -27,18 +23,14 @@ async function loginUser() {
     
 
     try {
-        // Получение данных из коллекции "Authorization"
         const snapshot = await get(ref(database, 'Authorization'));
         const users = snapshot.val();
 
-        // Фильтрация потенциальных пустых элементов
         const filteredUsers = Object.values(users).filter(u => u);
 
-        // Поиск пользователя с соответствующим email и паролем (без учета регистра)
         const user = filteredUsers.find(u => u.Login.toLowerCase() === email.toLowerCase() && u.Password === password);
 
         if (user) {
-            // Сохранение данных пользователя в localStorage
             //localStorage.setItem('userID', user.ID_PersonalAccount);
             //localStorage.setItem('userEmail', email);
 
@@ -91,5 +83,4 @@ function fail(){
               });
 }
 
-// Добавление слушателя события click к кнопке входа
 document.getElementById('loginbutton').addEventListener('click', loginUser);
