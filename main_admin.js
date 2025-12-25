@@ -3,6 +3,7 @@ import { getDatabase, ref, push, onValue, remove, update } from "https://www.gst
 import { firebaseConfig } from "./firebase-config.js";
 
 const app = initializeApp(firebaseConfig);
+
 const db = getDatabase(app);
 
 let currentCarsData = {};
